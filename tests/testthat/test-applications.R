@@ -26,6 +26,16 @@ test_succeeds("keras pre-built models can be instantiated", {
     
     if (is_keras_available("2.2.0"))
       application_mobilenet_v2()
+    
+    if(tensorflow::tf_version() >= package_version("2.3"))
+      application_efficientnet_b0()
+      application_efficientnet_b1()
+      application_efficientnet_b2()
+      application_efficientnet_b3()
+      application_efficientnet_b4()
+      application_efficientnet_b5()
+      application_efficientnet_b6()
+      application_efficientnet_b7()
   }
   
   application_resnet50()
