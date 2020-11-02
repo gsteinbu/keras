@@ -23,7 +23,7 @@ flow_images_from_dataframe(
   save_format = "png",
   subset = NULL,
   interpolation = "nearest",
-  drop_duplicates = NULL
+  drop_duplicates = TRUE
 )
 }
 \arguments{
@@ -104,8 +104,8 @@ installed, "lanczos" is also supported. If PIL version 3.4.0 or newer is
 installed, "box" and "hamming" are also supported. By default, "nearest"
 is used.}
 
-\item{drop_duplicates}{(deprecated in TF >= 2.3) Boolean, whether to drop
-duplicate rows based on filename. The default value is \code{TRUE}.}
+\item{drop_duplicates}{Boolean, whether to drop duplicate rows based on
+filename.}
 }
 \description{
 Takes the dataframe and the path to a directory and generates batches of
